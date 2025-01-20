@@ -1,12 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Responsive Site</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .nav {
+            flex: 1 0 200px; /* 200px width, growable */
+            background: #f4f4f4;
+            padding: 20px;
+            height: 100vh; /* Full height */
+        }
+        .content {
+            flex: 4; /* Takes the rest of the space */
+            padding: 20px;
+        }
+        .mobile-nav, .desktop-nav {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .nav {
+                height: auto;
+                order: 2; /* Nav goes to the bottom */
+            }
+            .content {
+                order: 1; /* Content shows first */
+            }
+            .mobile-nav {
+                display: block;
+            }
+            .desktop-nav {
+                display: none;
+            }
+        }
+        @media (min-width: 769px) {
+            .desktop-nav {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>My Website</h1>
-  <p>This is my website.</p>
+    <div class="container">
+        <div class="nav">
+            <div class="desktop-nav">
+                <!-- Desktop Navigation -->
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="mobile-nav">
+                <!-- Mobile Navigation -->
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Welcome to Our Website</h1>
+            <p>This is a simple responsive HTML website.</p>
+            <h2>Video</h2>
+            <video width="320" height="240" controls>
+                <source src="movie.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h2>Photos</h2>
+            <img src="photo.jpg" alt="Sample Photo" width="300">
+        </div>
+    </div>
 </body>
-</html> 
+</html>
