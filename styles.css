@@ -5,27 +5,26 @@ body, html {
 }
 .container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    height: 100vh;
 }
 .nav {
-    flex: 1 0 200px; /* Fixed width */
+    flex-basis: 200px; /* Fixed width for the sidebar */
     background: #f4f4f4;
     padding: 20px;
-    height: 100vh; /* Full height */
+    display: block; /* Always visible on desktop */
 }
 .content {
-    flex: 4; /* Takes the remaining space */
+    flex-grow: 1; /* Takes up the rest of the space */
     padding: 20px;
+    overflow-y: auto; /* Adds scroll to content if needed */
+}
+a {
+    text-decoration: none;
+    color: blue;
 }
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
     .nav {
-        height: auto;
-        order: 2; /* Nav goes to the bottom */
-    }
-    .content {
-        order: 1; /* Content shows first */
+        display: none; /* Hide nav bar on mobile */
     }
 }
