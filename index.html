@@ -8,6 +8,13 @@
 </head>
 <body>
     <div class="container">
+        <div class="hamburger">☰</div> <!-- Hamburger Menu Icon -->
+        <div class="nav-mobile">
+            <a href="index.html">Home</a>
+            <a href="photography.html">Photography</a>
+            <a href="videography.html">Videography</a>
+            <a href="contact.html">Contact</a>
+        </div>
         <div class="nav">
             <ul>
                 <li><a href="index">Contact</a></li>
@@ -22,5 +29,25 @@
             <p>Email: <a href="mailto:carrara.g@gmail.com">carrara.g@gmail.com</a></p>
         </div>
     </div>
+    
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-mobile').style.display = 'block'; // Show the nav-mobile div
+        });
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-mobile').style.display = 'block'; // Show the nav-mobile div
+        });
+        
+        document.querySelector('.nav-mobile').addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                this.style.display = 'none'; // Hide the nav-mobile div when any link is clicked
+            }
+        });
+        window.addEventListener('click', function(e) {
+            if (e.target.className !== 'hamburger' && e.target.className !== 'nav-mobile') {
+                document.querySelector('.nav-mobile').style.display = 'none'; // Also hides the nav-mobile when clicking outside of it
+            }
+        });
+    </script>
 </body>
 </html>
