@@ -20,12 +20,13 @@ body, html {
 }
 .content {
     flex-grow: 1;
-    padding: 10px;
+    padding: 20px; /* Added more padding for aesthetics */
     overflow-y: auto;
 }
 .video-container {
-    width: 100%;
-    height: calc(100vh - 20px); /* Full height minus padding */
+    width: 100%; /* Full width of the content area */
+    height: 75vh; /* Reduced height to 75% of the viewport height */
+    padding: 20px 0; /* Added padding around the video for spacing */
 }
 .video-container iframe {
     width: 100%;
