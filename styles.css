@@ -12,7 +12,7 @@ body, html {
     overflow: hidden;
 }
 .nav {
-    flex-basis: 50px; /* Reduced width for minimalistic sidebar */
+    flex-basis: 50px; /* Minimalistic sidebar */
     background: #000;
     padding: 20px;
     display: block;
@@ -20,13 +20,16 @@ body, html {
 }
 .content {
     flex-grow: 1;
-    padding: 20px; /* Added more padding for aesthetics */
+    padding: 20px; /* Adjusted for overall content padding */
     overflow-y: auto;
 }
 .video-container {
-    width: 100%; /* Full width of the content area */
-    height: 75vh; /* Reduced height to 75% of the viewport height */
-    padding: 20px 0; /* Added padding around the video for spacing */
+    width: calc(100% - 40px); /* Adjust width to account for padding */
+    height: 65vh; /* Adjusted height for a smaller video presentation */
+    padding: 20px; /* Increased padding for a larger border effect */
+    border: 2px solid #ccc; /* Optional: border around the video */
+    box-sizing: border-box; /* Ensures padding and border are included in the width/height */
+    margin: auto; /* Center the video container if there's extra space */
 }
 .video-container iframe {
     width: 100%;
@@ -35,5 +38,9 @@ body, html {
 @media (max-width: 768px) {
     .nav {
         display: none;
+    }
+    .video-container {
+        width: 100%; /* Full width on mobile devices */
+        padding: 10px; /* Smaller padding on mobile */
     }
 }
