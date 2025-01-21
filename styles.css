@@ -40,6 +40,7 @@ body, html {
 .photo-container {
     margin-bottom: 40px; /* Adds space between each photo */
     text-align: center; /* Centers the content */
+    padding-top: 0; /* Removes any padding at the top that might look like a border */
 }
 .photo-title {
     font-size: 18px; /* Slightly larger font for titles */
