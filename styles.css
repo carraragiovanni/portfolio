@@ -1,9 +1,9 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: #fff; /* Ensures the background is white */
-    color: #333; /* Standard text color for readability */
+    font-family: 'Times New Roman', serif; /* Sets Times New Roman as the font */
+    background: #fff;
+    color: #333;
 }
 .container {
     display: flex;
@@ -12,48 +12,47 @@ body, html {
     overflow: hidden;
 }
 .nav {
-    flex-basis: 50px; /* Keeps a narrow navigation bar */
-    background: #f4f4f4; /* Light gray background */
+    flex-basis: 50px;
+    background: #f4f4f4;
     padding: 20px;
     display: block;
-    color: #000; /* Black text color for contrast */
-    font-size: 14px; /* Smaller font for a more refined look */
+    color: #000;
+    font-size: 14px;
 }
 .nav ul {
-    list-style: none; /* Removes bullets */
-    padding: 0; /* Removes padding, particularly on the left */
-    margin: 0; /* Removes any default margins */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 .nav li {
-    padding: 8px 0; /* Adds vertical padding for spacing between items */
+    padding: 8px 0;
 }
 .nav a {
-    text-decoration: none; /* Removes underline from links */
-    color: #000; /* Ensures text is black */
-    display: block; /* Makes the entire list item area clickable */
+    text-decoration: none;
+    color: #000;
+    display: block;
 }
 .content {
     flex-grow: 1;
     padding: 20px;
     overflow-y: auto;
 }
-.video-container {
-    width: calc(100% - 40px); /* Accounts for padding */
-    height: 65vh; /* Smaller height for aesthetic purposes */
-    padding: 20px;
-    margin-bottom: 20px; /* Adds space between video containers */
-    border: none; /* Ensures no border is displayed around videos */
+.photo-container {
+    margin-bottom: 40px; /* Adds space between each photo */
+    text-align: center; /* Centers the content */
 }
-.video-container iframe {
-    width: 100%;
-    height: 100%;
+.photo-title {
+    font-size: 18px; /* Slightly larger font for titles */
+    margin-bottom: 10px; /* Space between title and photo */
+}
+.photo-img {
+    width: 100%; /* Full width to scale with the container */
+    max-width: 800px; /* Maximum width to ensure photos are not overly large */
+    height: auto; /* Maintains the aspect ratio */
+    margin: auto; /* Centers the image horizontally */
 }
 @media (max-width: 768px) {
     .nav {
-        display: none; /* Hides the navigation bar on smaller screens */
-    }
-    .video-container {
-        padding: 10px;
-        height: auto; /* Adapts height to content on smaller screens */
+        display: none;
     }
 }
