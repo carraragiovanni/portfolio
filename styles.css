@@ -2,8 +2,8 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: #fff;
-    color: #333;
+    background: #fff; /* Ensures the background is white */
+    color: #333; /* Standard text color for readability */
 }
 .container {
     display: flex;
@@ -12,23 +12,25 @@ body, html {
     overflow: hidden;
 }
 .nav {
-    flex-basis: 50px; /* Minimalistic sidebar */
-    background: #000;
+    flex-basis: 50px; /* Keeps a narrow navigation bar */
+    background: #f4f4f4; /* Light gray background instead of black */
     padding: 20px;
     display: block;
-    color: #fff;
+    color: #000; /* Black text color for contrast */
+    font-size: 14px; /* Smaller font for a more refined look */
 }
 .content {
     flex-grow: 1;
-    padding: 20px; /* Adjusted for overall content padding */
+    padding: 20px;
     overflow-y: auto;
 }
 .video-container {
-    width: calc(100% - 40px); /* Adjust width to account for padding */
-    height: 65vh; /* Adjusted height for a smaller video presentation */
-    padding: 20px; /* Increased padding for a larger border effect */
-    box-sizing: border-box; /* Ensures padding and border are included in the width/height */
-    margin: auto; /* Center the video container if there's extra space */
+    width: calc(100% - 40px); /* Accounts for padding */
+    height: 65vh; /* Smaller height for aesthetic purposes */
+    padding: 20px;
+    border: 1px solid #ccc; /* Subtle border */
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Adds space between video containers */
 }
 .video-container iframe {
     width: 100%;
@@ -36,10 +38,10 @@ body, html {
 }
 @media (max-width: 768px) {
     .nav {
-        display: none;
+        display: none; /* Hides the navigation bar on smaller screens */
     }
     .video-container {
-        width: 100%; /* Full width on mobile devices */
-        padding: 10px; /* Smaller padding on mobile */
+        padding: 10px;
+        height: auto; /* Adapts height to content on smaller screens */
     }
 }
