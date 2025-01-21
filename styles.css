@@ -13,11 +13,24 @@ body, html {
 }
 .nav {
     flex-basis: 50px; /* Keeps a narrow navigation bar */
-    background: #f4f4f4; /* Light gray background instead of black */
+    background: #f4f4f4; /* Light gray background */
     padding: 20px;
     display: block;
     color: #000; /* Black text color for contrast */
     font-size: 14px; /* Smaller font for a more refined look */
+}
+.nav ul {
+    list-style: none; /* Removes bullets */
+    padding: 0; /* Removes padding, particularly on the left */
+    margin: 0; /* Removes any default margins */
+}
+.nav li {
+    padding: 8px 0; /* Adds vertical padding for spacing between items */
+}
+.nav a {
+    text-decoration: none; /* Removes underline from links */
+    color: #000; /* Ensures text is black */
+    display: block; /* Makes the entire list item area clickable */
 }
 .content {
     flex-grow: 1;
@@ -28,9 +41,8 @@ body, html {
     width: calc(100% - 40px); /* Accounts for padding */
     height: 65vh; /* Smaller height for aesthetic purposes */
     padding: 20px;
-    border: 1px solid #ccc; /* Subtle border */
-    box-sizing: border-box;
     margin-bottom: 20px; /* Adds space between video containers */
+    border: none; /* Ensures no border is displayed around videos */
 }
 .video-container iframe {
     width: 100%;
